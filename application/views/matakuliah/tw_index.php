@@ -10,19 +10,14 @@
 </head>
 <style>
 
-    .container {
-        width: fit-content;
-        margin: auto;
-        margin-top: 50px;
-        border: 3px solid grey;
-        padding: 32px;
-        border-radius: 24px;
-    }
+
 </style>
 
 <body>
-    <div class="container">
-        <form class="w-full max-w-sm" action="<?php echo base_url('formmatakuliah/tw_save'); ?>" method="post">
+<div  class="flex h-screen items-center justify-center">
+    <div style="padding: 32px" class="shadow-lg">
+        <h2 class="subpixel-antialiased text-center text-xl font-black" style="margin-bottom: 32px;">Form Input Mata Kuliah</h2>
+        <form class="w-full max-w-sm " action="<?php echo base_url('formmatakuliah/tw_save'); ?>" method="post">
             <div class="md:flex md:items-center mb-6">
                 <div class="md:w-1/3">
                     <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
@@ -75,6 +70,7 @@
                 </div>
             </div>
         </form>
+    </div>
     </div>
 </body>
 

@@ -17,52 +17,65 @@
         padding: 32px;
         border-radius: 24px;
     }
+
     h2 {
         margin-bottom: 24px;
     }
 </style>
 
 <body>
-    <div class="container bg-blue-500 shadow-lg shadow-blue-500/50 text-white">
-        <h2 class="font-semibold text-center">Tabel simulasi jika beberapa data telah diinput</h2>
-        <table class="table-fixed">
-            <thead>
-                <tr>
-                    <th>Kode MTK</th>
-                    <th>Nama MTK</th>
-                    <th>Jumlah SKS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-blue-400 duration-300 " style="cursor: pointer;">
-                    <td align="left"><?php echo $kode ?></td>
-                    <td><?php echo $nama ?></td>
-                    <td align="right"><?php echo $sks ?></td>
-                </tr>
-                <tr class="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-blue-400 duration-300 " style="cursor: pointer;">
-                    <td align="left"><?php echo $kode ?></td>
-                    <td><?php echo $nama ?></td>
-                    <td align="right"><?php echo $sks ?></td>
-                </tr>
-                <tr class="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-blue-400 duration-300 " style="cursor: pointer;">
-                    <td align="left"><?php echo $kode ?></td>
-                    <td><?php echo $nama ?></td>
-                    <td align="right"><?php echo $sks ?></td>
-                </tr>
-                <tr class="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-blue-400 duration-300 bg-blend-multiply " style="cursor: pointer;">
-                    <td align="left"><?php echo $kode ?></td>
-                    <td><?php echo $nama ?></td>
-                    <td align="right"><?php echo $sks ?></td>
-                </tr>
-                <tr class="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-blue-400 duration-300 " style="cursor: pointer;">
-                    <td align="left"><?php echo $kode ?></td>
-                    <td><?php echo $nama ?></td>
-                    <td align="right"><?php echo $sks ?></td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" href="<?php echo base_url('formmatakuliah/tw'); ?>">Back</a>
+    <div class="flex h-screen items-center justify-center">
+        <div style="padding: 32px" class="shadow-lg">
+            <h2 class="subpixel-antialiased text-center text-xl font-black " style="margin-bottom: 32px;">Data Tersimpan</h2>
+            <form class="w-full max-w-sm " action="<?php echo base_url('formmatakuliah/tw_save'); ?>" method="post">
+                <div class="md:flex md:items-center mb-6">
+                    <div class="md:w-1/3">
+                        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                            Kode MTK
+                        </label>
+                    </div>
+                    <div class="md:w-2/3">
+                        <input required name="kodematkul" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" disabled value="<?php echo $kode ?>">
+                    </div>
+                </div>
+                <div class="md:flex md:items-center mb-6">
+                    <div class="md:w-1/3">
+                        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                            Nama MTK
+                        </label>
+                    </div>
+                    <div class="md:w-2/3">
+                        <input required name="namamatkul" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" disabled value="<?php echo $nama ?>">
+                    </div>
+                </div>
+                <div class="md:flex md:items-center mb-6">
+                    <div class="md:w-1/3">
+                        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+                            Jumlah SKS
+                        </label>
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="relative">
+                            <select required name="sks" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" disabled value="<?php echo $sks ?>">
+
+                                <option>1 SKS</option>
+                                <option>2 SKS</option>
+                                <option>3 SKS</option>
+                                <option>4 SKS</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:flex md:items-center">
+                    <div class="relative">
+                        <button onclick="location.href='<?php echo base_url('formmatakuliah/tw'); ?>'" type="button">
+                            Back</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
