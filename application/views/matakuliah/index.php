@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= base_url('dist/output.css') ?>">
     <title>Form | Mata Kuliah</title>
 </head>
 <style>
@@ -58,7 +59,7 @@
 <body>
     <div class="container">
         <h2 align="center">Form Mata Kuliah</h2>
-        <form action="<?php echo base_url('formmatakuliah/save');?>" method="post">
+        <form action="<?php echo base_url('formmatakuliah/save'); ?>" method="post">
             <div class="form-panel">
                 <div class="form-row form-name">
                     <input type="text" name="kodematkul" id="kodematkul" autocomplete="false" placeholder="Kode Mata Kuliah" required>
