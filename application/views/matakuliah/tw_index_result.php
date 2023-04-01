@@ -61,6 +61,8 @@
                 </tr>
             </tbody>
         </table>
+        <br>
+        <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" href="<?php echo base_url('formmatakuliah/tw'); ?>">Back</a>
     </div>
 </body>
 
